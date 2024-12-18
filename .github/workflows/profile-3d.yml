@@ -19,7 +19,7 @@ jobs:
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           USERNAME: ${{ github.repository_owner }}
-          MAX_LANGUAGES: 12
+          MAX_LANGUAGES: 6
       - name: Commit & Push
         run: |
           git config user.name github-actions
