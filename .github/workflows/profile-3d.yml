@@ -18,7 +18,8 @@ jobs:
       - uses: jrlagrone/github-profile-3d-contrib@v0.8.1
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-          USERNAME: jrlagrone
+          USERNAME: ${{ github.repository_owner }}
+          MAX_LANGUAGES: 12
       - name: Commit & Push
         run: |
           git config user.name github-actions
