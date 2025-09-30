@@ -15,13 +15,14 @@ jobs:
       contents: write
     steps:
       - uses: actions/checkout@v5
-      - uses: jrlagrone/github-profile-3d-contrib@latest
+      - uses: jrlagrone/github-profile-3d-contrib@main
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           USERNAME: ${{ github.repository_owner }}
           MAX_LANGUAGES: 6
       - name: Commit & Push
         run: |
+          git fetch origin
           git config user.name github-actions
           git config user.email github-actions@github.com
           git add -A .
