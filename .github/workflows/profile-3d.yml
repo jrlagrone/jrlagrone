@@ -14,8 +14,8 @@ jobs:
       # added or changed files to the repository.
       contents: write
     steps:
-      - uses: actions/checkout@v5
-      - uses: jrlagrone/github-profile-3d-contrib@@v0.9.2
+      - uses: actions/checkout@v6
+      - uses: jrlagrone/github-profile-3d-contrib@v0.9.2
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           USERNAME: ${{ github.repository_owner }}
