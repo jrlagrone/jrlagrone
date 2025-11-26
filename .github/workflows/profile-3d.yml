@@ -15,7 +15,7 @@ jobs:
       contents: write
     steps:
       - uses: actions/checkout@v6
-      - uses: jrlagrone/github-profile-3d-contrib@add_language_granularity
+      - uses: jrlagrone/github-profile-3d-contrib@main
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           USERNAME: ${{ github.repository_owner }}
